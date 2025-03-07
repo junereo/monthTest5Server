@@ -4,7 +4,7 @@ const sequelize = require('../models/index');
 const getCount = async (req, res) =>{
     try{
         const response = await sequelize.models.Count.findAll({
-            order: [['createdAt', 'DESC']],
+            order: [['id', 'DESC'],['createdAt', 'DESC']],
         });
         //console.log(response);
         if(response){
